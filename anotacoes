@@ -1,0 +1,44 @@
+O gulp é uma ferramenta para realizarmos builds de aplicações fron-end antes de realizarmos o deploy. Nele podemos automatizar tarefas, tais como minificar codigo fonte, modificar variáveis de enviroments, compactar imagens, dentre outras coisas. 
+
+O Gulp é é um módulo do node.js, seus módulos são instalados através do NPM. 
+
+Criando o package.json:
+
+Para que o gulp funcione corretamente, vamos anexar seus comandos para serem chamados a partir do package.json, caso não esteja criado, basta excutar o comando npm init no diretório do projeto. Com o package.json, listamos também toda dependência do projeto. 
+
+Instalando o gulp:
+
+npm instal gulp //@3.9.0 --save dev Ps:@:versao --save:salvar np package dev:dependência de dev
+
+Após instalar o gulp, vamos setar ele no campo scripts do package.json:
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+
+Após salvar podemos rodar o arquivo 'npm run gulp', que irá executar o script gulpfile.js.
+
+Criando o arquivo gulpfile.js:
+
+Criando tarefa para minificação de imagem:
+
+//gulpfile.js
+
+const gulp = require('gulp');
+
+gulp.src('src/img'); // Local de acesso
+gulp.dest('src/img'); // Local de destino
+
+// lib do gulp para minificar imagens
+npm install gulp-imagemin@2.3.0 --save-dev	
+
+
+---------------------------------------------------------
+Copiando arquivos com Gulp:
+
+* Caso seja necessário, é possível manter os arquivos antes das alterações realizadas pelo gulp, para isso, podemos copiar o projeto e colar em outra pasta. Para isso, também é necessário apagar arquivos anteriores na pasta de destino em que vamos colar os arquivos. Para isso, temos mais uma extensão do gulp chamada 'gulp-clean'.
+
+instalar gulp-clean: npm install gulp-clean //@0.3.1 --save-dev
+
+
