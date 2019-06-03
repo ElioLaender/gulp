@@ -47,3 +47,65 @@ Concatenando código fonte:
 npm install gulp concat //@2.6.0 --save-dev
 
 
+
+
+/////////////////////////////////////////////////////////////////
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Each Jquery</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+    <body>
+        <br/>
+       <h3>Iteração por elementos com $each()</h3>
+       <form>
+            <div class="div-input">
+                <input type="text" id="nome" class="input" placeholder="nome">
+            </div>
+            <div class="div-input-error">
+                <input type="email" id="email" class="input" placeholder="email">
+            </div>
+            <div class="div-input">
+                <input type="password" id="senha" class="input" placeholder="senha">
+            </div>
+       </form>
+       <button  id="enviar" >Enviar</button>
+    </body>
+    <script src="js/jquery3.0.0.min.js"></script>
+
+    <script>
+        $("#enviar").on("click", () => {
+            $('form > div').each((index, element) => {
+                if ($(element).hasClass('div-input-error')) {
+                    console.log('tem erro');
+                } else {
+                    console.log('não tem erro');
+                }
+            });
+        });
+    </script>
+</html>
+////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
