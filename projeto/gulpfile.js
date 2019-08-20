@@ -16,13 +16,13 @@ const cssMin = require("gulp-cssmin");
 const useMin = require("gulp-usemin");
 // Cria um servidor para rodar a aplicação
 const browserSync = require("browser-sync");
-// Responsável por verificar erros de sintazes no JS
+// Responsável por verificar erros de sintaxes no JS
 const jsHint = require("gulp-jshint");
 // Responsável por melhorar a forma como erros são descritos no terminal pelo jshint
 const jsHintStylish = require("gulp-jshintStylish");
 // Verifica erros de sintaxe no css
 const cssHint = require("gulp-csslint");
-// Realiza prefixação dos atributos exprerimentais nos nagegadores
+// Realiza prefixação dos atributos exprerimentais nos navegadores
 const autoPrefixer = require("gulp-autoprefixer");
 // Responsável por automatizar compilação de arquivos less
 const less = require('gulp-less');
